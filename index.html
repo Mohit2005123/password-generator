@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Password Generator</title>
+</head>
+<body>
+  <div class="password-generator">
+    <h1>Password Generator</h1>
+    <div class="generatedpassword">
+        <p class="finalpassword"></p>
+        <i class="fa fa-copy copy" style="font-size:24px"></i>
+    </div>
+    <label for="password-length" class="length">Password Length: 8</label>
+    <input type="range" name="password-length" min="1" max="30" value="8" class="number">
+    <div class="options">
+      <div class="option">
+        <input type="checkbox" id="lowercase-letters" name="lowercase-letters" checked class="lowercase">
+        <label for="lowercase-letters">Include Lowercase Letters (a-z)</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="uppercase-letters" name="uppercase-letters" checked class="uppercase">
+        <label for="uppercase-letters">Include Uppercase Letters (A-Z)</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="numbers" name="numbers" checked class="numbers">
+        <label for="numbers">Include Numbers (0-9)</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="symbols" name="symbols" checked class="special">
+        <label for="symbols">Include Symbols (@-")</label>
+      </div>
+    </div>
+    <button id="generate-password">Generate Password</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
